@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="top.ottofans.assignment_3.entity.Employee" table="sa_employee" schema="ssh_assignment">
+        <id name="id">
+            <column name="id" sql-type="int(10)"/>
+        </id>
+        <property name="lastName">
+            <column name="last_name" sql-type="varchar(64)" length="64" not-null="true"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(64)" length="64" not-null="true"/>
+        </property>
+        <property name="birth">
+            <column name="birth" sql-type="timestamp(19)" not-null="true"/>
+        </property>
+        <property name="createTime">
+            <column name="create_time" sql-type="timestamp(19)" not-null="true"/>
+        </property>
+        <property name="departmentId">
+            <column name="department_id" sql-type="int(10)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
